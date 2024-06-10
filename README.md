@@ -1,1 +1,1 @@
-Se quiser sim mano
+Este site é um projeto da SA da nossa equipe no SENAI de Florianopolis 

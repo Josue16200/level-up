@@ -8,15 +8,59 @@
 <body>
     <div class="menu">
         <p class="logo">placeholder</p>
-        <a href="sobre.html"><button class="cima">Sobre</button></a>
-        <a href="login.html"><button class="cima">Login</button></a>
-        <a href="cadastro.html"><button class="cima">Cadastro</button></a>
+        <button class="cima">Sobre</button>
+        <button class="cima" onclick="login()">Login</button>
+        <button class="cima" onclick="cadastro()">Cadastro</button>
     </div>
+    <div id="cadastro">
+        <form>
+            <h3>Cadastro</h3>
+            <label>Nome</label><br><input type="text" class="digitacao_sign"><br><br>
+            <label>Data de nascimento</label><br><input type="date" class="digitacao_sign"><br><br>
+            <label>Email</label><br><input type="email" class="digitacao_sign"><br><br>
+            <label>Senha</label><br><input type="password" class="digitacao_sign"><br><br>
+            <input type="submit" value="Cadastrar">
+        </form>
+       </div>
+       <div id="login">
+            <form>
+                <h3>Login</h3>
+                <label>Email</label><br><input type="email"><br><br>
+                <label>Senha</label><br><input type="password"><br><br>
+                <input type="submit" value="Login">
+                <br><br>
+            </form>
+       </div>
    <div class="titulo">
     <h2>Level Up</h2>
     <h1>Placeholder</h1>
-    <button class="explorar">Ver Prévia</button>
+    <button class="explorar">Integrantes</button>
    </div>
+   <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   <div class="sobre">
+    <br>
+    <h1>Integrantes:</h1><br>
+    <div id="front">
+        <h2>Front-End:</h2>
+        <h3>Laura Cristina Melek Nunes</h3><img src="" alt="">
+        <h3>Josué de Oliveira Mendonça<h3></h3><img src="" alt="">
+    </div>
+    <div id="back">
+        <h2>Back-End:</h2>
+        <h3>Maria Eduarda Knupp Ratto<h3></h3><img src="" alt="">
+        <h3>Maria Eduarda Klin de Carvalho</h3><img src="" alt="">
+        <h3>Luciano Coimbra de Almeida Junior</h3><img src="" alt="">
+    </div>
+   </div>
+   <style>
+    #front{
+        position: absolute;
+    }  
+    #back{
+        position: relative;
+        margin-left: 50%;
+    }
+   </style>
    <style>
     body{
         color: white;
@@ -32,19 +76,97 @@
         padding: 3em;
         position: absolute;
         right: 0;
-        text-align: center;
         top: 0;
         background-size: cover;
         background-image: url(img/backiee-226159-landscape.jpg);
         background-color: black;
-        height: auto;
+        height: auto;   
+    }
+    .sobre{
+        background-color: rgb(05, 05, 05);
+        padding-left: 20px;
+        width: 100%;
+    }
+    body::-webkit-scrollbar {
+        width: 12px; /* width of the entire scrollbar */
+    }
+
+    body::-webkit-scrollbar-track {
+        background: white; /* color of the tracking area */
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: rgb(05, 05, 05); /* color of the scroll thumb */
+        border-radius: 0px; /* roundness of the scroll thumb */
+        border: 3px solid none; /* creates padding around scroll thumb */
+    }
+    #login{
+        background-color: rgb(22, 22, 22, 0.9);
+        margin-left: 5%;
+        border-radius: 30px;
+        animation: login 1s;
+        position: absolute;
+        margin-top: 15%;
+        text-align: center;
+    }
+    #cadastro{
+            margin-top: 8%;
+            text-align: center;
+            background-color: rgb(22, 22, 22, 0.9);
+            color: white;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            margin-left: 5%;
+            border-radius: 50px;
+            animation: cadastro 1s;
+            position: absolute;
+    }
+    #login, #cadastro{
+        display: none;
     }
     .titulo{
         position: relative;
         text-align: center;
         margin-top: 17%;
     }
+    @keyframes cadastro {
+        0%{
+            margin-left: -10em;
+        }
+    }
+    @keyframes login {
+        0%{
+            margin-left: -10em;
+        }
+    }
+    input[type="text"], input[type="email"], input[type="password"]{
+        height: 30px;
+        width: 200px;
+        border-radius: 10px;
+        font-size: 15px;
+        border-style: none;
+    }
+    input[type="date"]{
+        text-align: center;
+        font-size: 15px;
+        width: 200px;
+    }
+    input[type="submit"]{
+        height: 50px;
+        width: 150px;
+        font-size: 20px;
+        border-radius: 20px;
+    }
+    input{
+        border-style: none;
+        font-family: bold, sans-serif;
+    }
+    label{
+        font-family: bold, sans-serif;
+        font-size: 20px;
+    }
     .explorar{
+        cursor: pointer;
         border-style: none;
         font-size: 20px;
         height: 50px;
@@ -58,6 +180,7 @@
         width: 100%;
         min-width: 100%;
         background-size: cover;
+        border-radius: 10px;
     }
     .cima{
         font-size: 18px;
@@ -79,14 +202,22 @@
    </style>
    <script>
     const titulo = document.querySelector(".titulo")
+    const cadastrar = document.querySelector("#cadastro")
+    const logar = document.querySelector("#login")
     function cadastro(){
-        const cadastrar = document.querySelector("#cadastro")
         if(cadastrar.style.display === "none"){
             cadastrar.style.display = 'block'
-            titulo.style.display = 'none'
+            logar.style.display = 'none'
         }else{
-            titulo.style.display = 'block'
             cadastrar.style.display = 'none'
+        }
+    }
+    function login(){
+        if(logar.style.display === 'none'){
+            logar.style.display = 'block'
+            cadastrar.style.display = 'none'
+        }else{
+            logar.style.display = 'none'
         }
     }
    </script>

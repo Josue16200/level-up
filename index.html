@@ -8,9 +8,9 @@
 <body>
     <div class="menu">
         <p class="logo">placeholder</p>
-        <button class="cima">Sobre</button>
-        <button class="cima" onclick="login()">Login</button>
-        <button class="cima" onclick="cadastro()">Cadastro</button>
+        <input type="button" class="cima" onclick="login()" value="Login">
+        <input type="button" class="cima" onclick="cadastro()" value="Cadastro">
+        <a href="#sobre"><button class="cima">Desenvolvedores</button></a>
     </div>
     <div id="cadastro">
         <form>
@@ -19,7 +19,7 @@
             <label>Data de nascimento</label><br><input type="date" class="digitacao_sign"><br><br>
             <label>Email</label><br><input type="email" class="digitacao_sign"><br><br>
             <label>Senha</label><br><input type="password" class="digitacao_sign"><br><br>
-            <input type="submit" value="Cadastrar">
+            <input type="submit" value="Cadastrar" class="sim">
         </form>
        </div>
        <div id="login">
@@ -27,19 +27,19 @@
                 <h3>Login</h3>
                 <label>Email</label><br><input type="email"><br><br>
                 <label>Senha</label><br><input type="password"><br><br>
-                <input type="submit" value="Login">
+                <input type="submit" value="Login" class="sim">
                 <br><br>
             </form>
        </div>
    <div class="titulo">
     <h1>Level Up</h1>
     <h1>Transforme-se em um heroi na vida real</h1>
-    <button class="explorar">Integrantes</button>
+    <button class="explorar">Start</button>
    </div>
    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-   <div class="sobre">
+   <div class="sobre" id="sobre">
     <br>
-    <h1>Integrantes:</h1><br>
+    <h1 style="padding-left: 39%;">>Desenvolvedores<</h1><br>
     <div id="front">
         <h2>Front-End:</h2>
         <h3>Laura Cristina Melek Nunes</h3><img src="" alt="">
@@ -83,9 +83,11 @@
         height: auto;   
     }
     .sobre{
-        background-color: rgb(05, 05, 05);
+        background-color: rgb(05, 05, 05, 0.99);
         padding-left: 20px;
         width: 100%;
+        border-top-right-radius: 100px;
+        border-top-left-radius: 100px;
     }
     body::-webkit-scrollbar {
         width: 12px; /* width of the entire scrollbar */
@@ -128,6 +130,12 @@
         position: relative;
         text-align: center;
         margin-top: 17%;
+        padding-bottom: 1%;
+        padding-top: 1px;
+        margin-left:25%;
+        margin-right:25%;
+        border-radius: 70px;
+        background-color: rgb(22, 22, 22, 0.91);
     }
     @keyframes cadastro {
         0%{
@@ -151,10 +159,16 @@
         font-size: 15px;
         width: 200px;
     }
-    input[type="submit"]{
+    .sim{
         height: 50px;
         width: 150px;
         font-size: 20px;
+        border-radius: 20px;
+    }
+    .sim:hover{
+        transition: 0.5s;
+        background-color: white;
+        color: black;
         border-radius: 20px;
     }
     input{
@@ -172,7 +186,13 @@
         height: 50px;
         width: 150px;
         border-radius: 100px;
-        background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOwRConBYl2t6L8QMOAQqa5FDmPB_bg7EnGA&s);
+        background: black;
+        color: white;
+    }
+    .explorar:hover{
+        transition: 0.5s;
+        background-color: white;
+        color: black;
     }
     .menu{
         color: white;
@@ -183,20 +203,31 @@
         border-radius: 10px;
     }
     .cima{
-        font-size: 18px;
-        padding-top: 1%;
+        font-size: 15px;
         color:white;
         border-style: none;
         background: transparent;
         padding-left: 1%;
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 10px;
         display: inline-block;
         vertical-align: top;
         cursor: pointer;
+        margin-top: 10px;
+        border-radius: 20px;
+    }
+    .cima:hover{
+        transition: 0.5s;
+        background-color: white;
+        color: black;
+        
     }
     .logo{
         vertical-align: top;
         display: inline-block;
-        padding-right: 70%;
+        padding-right: 65%;
         padding-left: 5%;
     }
    </style>
@@ -219,6 +250,10 @@
         }else{
             logar.style.display = 'none'
         }
+    }
+    function developers(){
+        var developers = document.querySelector(".sobre")
+        
     }
    </script>
 </body>

@@ -8,29 +8,10 @@
 <body>
     <div class="menu">
         <p class="logo">placeholder</p>
-        <input type="button" class="cima" onclick="login()" value="Login">
-        <input type="button" class="cima" onclick="cadastro()" value="Cadastro">
+        <a href="login.html"><input type="button" class="cima" value="Login"></a>
+        <a href="cadastro.html"><input type="button" class="cima" value="Cadastro"></a>
         <a href="#sobre"><button class="cima">Desenvolvedores</button></a>
     </div>
-    <div id="cadastro">
-        <form method="post" action="">
-            <h3>Cadastro</h3>
-            <label>Nome</label><br><input type="text" class="digitacao_sign" required><br><br>
-            <label>Data de nascimento</label><br><input type="date" class="digitacao_sign" required><br><br>
-            <label>Email</label><br><input type="email" class="digitacao_sign" required><br><br>
-            <label>Senha</label><br><input type="password" class="digitacao_sign" required><br><br>
-            <input type="submit" value="Cadastrar" class="sim">
-        </form>
-       </div>
-       <div id="login">
-            <form method="post" action="">
-                <h3>Login</h3>
-                <label>Email</label><br><input type="email" required><br><br>
-                <label>Senha</label><br><input type="password" required><br><br>
-                <input type="submit" value="Login" class="sim">
-                <br><br>
-            </form>
-       </div>
    <div class="titulo">
     <h1>Level Up</h1>
     <h1>Transforme-se em um heroi na vida real</h1>
@@ -235,29 +216,6 @@
     }
    </style>
    <script>
-    const titulo = document.querySelector(".titulo")
-    const cadastrar = document.querySelector("#cadastro")
-    const logar = document.querySelector("#login")
-    function cadastro(){
-        if(cadastrar.style.display === "none"){
-            cadastrar.style.display = 'block'
-            logar.style.display = 'none'
-        }else{
-            cadastrar.style.display = 'none'
-        }
-    }
-    function login(){
-        if(logar.style.display === 'none'){
-            logar.style.display = 'block'
-            cadastrar.style.display = 'none'
-        }else{
-            logar.style.display = 'none'
-        }
-    }
-    function developers(){
-        var developers = document.querySelector(".sobre")
-        
-    }
    </script>
 </body>
 </html>

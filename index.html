@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Level Up: Transforme-se em um heroi na vida real</title>
+    <link rel="icon" href="https://i.ibb.co/Mkbwybd/icone-removebg-preview.png">
 </head>
 <body>
-    <div class="menu">
-        <p class="logo">placeholder</p>
-        <a href="login.html"><input type="button" class="cima" value="Login"></a>
-        <a href="cadastro.html"><input type="button" class="cima" value="Cadastro"></a>
-        <a href="#sobre"><button class="cima">Desenvolvedores</button></a>
-    </div>
+    <nav>
+        <div class="menu">
+            <img src="img/icone-removebg-preview.png" class="logo">
+            <a href="login.html"><input type="button" class="cima" value="Login"></a>
+            <a href="cadastro.html"><input type="button" class="cima" value="Cadastro"></a>
+            <a><button class="cima" id="desenvolvedores">Desenvolvedores</button></a>
+        </div>
+    </nav>
+    <br><br><br><br><br><br>
    <div class="titulo">
     <h1>Level Up</h1>
     <h1>Transforme-se em um heroi na vida real</h1>
@@ -34,188 +38,158 @@
     </div>
    </div>
    <style>
-    #front{
-        position: absolute;
-    }  
-    #back{
-        position: relative;
-        margin-left: 50%;
-    }
+    
    </style>
    <style>
-    body{
-        color: white;
-        text-shadow: 0px 0px 10px black;
-        font-family: sans-serif;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-attachment: fixed;
-        background-size: cover;
-        bottom: 0;
-        left: 0;
-        overflow: auto;
-        padding: 3em;
-        position: absolute;
-        right: 0;
-        top: 0;
-        background-size: cover;
-        background-image: url(img/backiee-226159-landscape.jpg);
-        background-color: black;
-        height: auto;   
-    }
-    .sobre{
-        background-color: rgb(05, 05, 05, 0.99);
-        padding-left: 20px;
-        width: 100%;
-        border-top-right-radius: 100px;
-        border-top-left-radius: 100px;
-    }
-    body::-webkit-scrollbar {
-        width: 12px; /* width of the entire scrollbar */
-    }
-
-    body::-webkit-scrollbar-track {
-        background: white; /* color of the tracking area */
-    }
-
-    body::-webkit-scrollbar-thumb {
-        background-color: rgb(05, 05, 05); /* color of the scroll thumb */
-        border-radius: 0px; /* roundness of the scroll thumb */
-        border: 3px solid none; /* creates padding around scroll thumb */
-    }
-    #login{
-        background-color: rgb(22, 22, 22, 0.9);
-        margin-left: 5%;
-        border-radius: 30px;
-        animation: login 1s;
-        position: absolute;
-        margin-top: 15%;
-        text-align: center;
-    }
-    #cadastro{
-            margin-top: 8%;
-            text-align: center;
-            background-color: rgb(22, 22, 22, 0.9);
+    body {
             color: white;
-            padding-top: 2%;
-            padding-bottom: 2%;
-            margin-left: 5%;
+            text-shadow: 0px 0px 10px black;
+            font-family: sans-serif;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+            overflow: auto;
+            background: rgb(15,14,57);
+            background: linear-gradient(90deg, rgba(32,40,84,1) 0%, rgba(15,14,57,1) 100%);
+            padding: 3em;
+            margin: 0;
+        }
+        .icone {
+            height: 200px;
+            display: block;
+            margin: 20px auto;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(11, 11, 11);
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0px 10px 50px black;
+        }
+        .logo {
+            margin-right: auto;
+            padding-left: 20px;
+            height: 50px;
+        }
+        .cima {
+            font-size: 15px;
+            color: white;
+            border-style: none;
+            background: transparent;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+        .cima:hover {
+            transition: 0.5s;
+            background-color: white;
+            color: black;
+        }
+        .titulo {
+            text-align: center;
+            margin: 20px auto;
+            padding-top: 20px;
+            padding-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
             border-radius: 50px;
-            animation: cadastro 1s;
-            position: absolute;
-    }
-    #login, #cadastro{
-        display: none;
-    }
-    .titulo{
-        position: relative;
-        text-align: center;
-        margin-top: 17%;
-        padding-bottom: 1%;
-        padding-top: 1px;
-        margin-left:25%;
-        margin-right:25%;
-        border-radius: 70px;
-        background-color: rgb(22, 22, 22, 0.91);
-    }
-    @keyframes cadastro {
-        0%{
-            margin-left: -10em;
+            background-color: rgba(15, 14, 57, 0.5);
+            max-width: 80%;
+            box-shadow: 0px 10px 50px black;
+            border-style: groove;
+            border-color: rgba(15, 14, 57);
         }
-    }
-    @keyframes login {
-        0%{
-            margin-left: -10em;
+        .explorar {
+            cursor: pointer;
+            border-style: none;
+            font-size: 20px;
+            height: 50px;
+            width: 150px;
+            border-radius: 100px;
+            background: rgb(72, 206, 128);
+            color: white;
+            text-shadow: 0px 5px 5px black;
+            margin-top: 20px;
+            box-shadow: 0px 0px 10px black;
         }
-    }
-    input[type="text"], input[type="email"], input[type="password"]{
-        height: 30px;
-        width: 200px;
-        border-radius: 10px;
-        font-size: 15px;
-        border-style: none;
-    }
-    input[type="date"]{
-        text-align: center;
-        font-size: 15px;
-        width: 200px;
-    }
-    input[type="submit"]{
-        cursor: pointer;
-    }
-    .sim{
-        height: 50px;
-        width: 150px;
-        font-size: 20px;
-        border-radius: 20px;
-    }
-    .sim:hover{
-        transition: 0.5s;
-        background-color: white;
-        color: black;
-        border-radius: 20px;
-    }
-    input{
-        border-style: none;
-        font-family: bold, sans-serif;
-    }
-    label{
-        font-family: bold, sans-serif;
-        font-size: 20px;
-    }
-    .explorar{
-        cursor: pointer;
-        border-style: none;
-        font-size: 20px;
-        height: 50px;
-        width: 150px;
-        border-radius: 100px;
-        background: black;
-        color: white;
-    }
-    .explorar:hover{
-        transition: 0.5s;
-        background-color: white;
-        color: black;
-    }
-    .menu{
-        color: white;
-        background-color: rgb(11, 11, 11);
-        width: 100%;
-        min-width: 100%;
-        background-size: cover;
-        border-radius: 10px;
-    }
-    .cima{
-        font-size: 15px;
-        color:white;
-        border-style: none;
-        background: transparent;
-        padding-left: 1%;
-        padding-right: 10px;
-        padding-left: 10px;
-        padding-top: 5px;
-        padding-bottom: 10px;
-        display: inline-block;
-        vertical-align: top;
-        cursor: pointer;
-        margin-top: 10px;
-        border-radius: 20px;
-    }
-    .cima:hover{
-        transition: 0.5s;
-        background-color: white;
-        color: black;
-        
-    }
-    .logo{
-        vertical-align: top;
-        display: inline-block;
-        padding-right: 65%;
-        padding-left: 5%;
-    }
+        .explorar:hover {
+            transition: 0.5s;
+            background-color: rgb(72, 206, 128);
+            box-shadow: 0px 0px 10px rgb(72, 206, 128);
+        }
+        .sobre {
+            background-color: rgba(15, 14, 57, 0.99);
+            padding: 0px;
+            width: 100%;
+            border-radius: 100px;
+            margin-top: 5   0px;
+            text-align: center;
+            box-shadow: 0px 0px 10px black;
+        }
+        #front, #back {
+            margin-bottom: 20px;
+        }
+        .sobre h1{
+            margin-left: -38.5%;
+        }
+        @media (max-width: 1024px) {
+            .titulo {
+                max-width: 90%;
+            }
+        }
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .logo {
+                padding-right: 0;
+                margin-bottom: 10px;
+            }
+            .titulo {
+                max-width: 100%;
+            }
+            .icone {
+                height: 150px;
+            }
+            .cima {
+                margin-top: 5px;
+            }
+            .explorar {
+                width: 100%;
+                font-size: 18px;
+            }
+            .sobre{
+                padding-top: 10px;
+                padding-bottom: 1px;
+                border-radius: 50px;
+            }
+        }
+        @media (max-width: 480px) {
+            .titulo {
+                margin: 10px;
+                padding: 10px;
+                border-bottom-right-radius: 30px;
+                border-bottom-left-radius: 30px;
+            }
+            .explorar {
+                width: 100%;
+                font-size: 16px;
+                height: 40px;
+            }
+            .sobre{
+                font-size: 10px;
+            }
+        }
    </style>
    <script>
+    document.getElementById("desenvolvedores").addEventListener('click', function(){
+        document.getElementById("sobre").scrollIntoView({behavior: 'smooth'});
+    });
    </script>
 </body>
 </html>

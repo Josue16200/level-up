@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar - Level Up</title>
+    <link rel="icon" href="img/icone-removebg-preview.png">
+    <style>
+        body{
+            color: white;
+            text-shadow: 0px 0px 10px black;
+            font-family: sans-serif;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+            overflow: auto;
+            background: rgb(15,14,57);
+            background: linear-gradient(90deg, rgba(32,40,84,1) 0%, rgba(15,14,57,1) 100%);
+            padding: 3em;
+            margin: 0;
+        }
+        .iniciar{
+            margin-top: 15%;
+        }
+        input[type='button']{
+            margin-left: 20%;
+            margin-top: 50px;
+            border-radius: 100px;
+            height: 70px;
+            width: 200px;
+            color: white;
+            background-color: rgb(72, 206, 128);
+            font-size: 30px;
+            cursor: pointer;
+            text-shadow: 0px 0px 10px black;
+            box-shadow: 0px 0px 10px black;
+            border-style: none;
+        }
+        input[type='button']:hover{
+            transition: 0.2s;
+            box-shadow: 0px 0px 10px rgb(72, 206, 128);
+        }
+        a{
+            text-decoration: none;
+        }
+        #index{
+            cursor: pointer;
+            position: fixed;
+            height: 50px;
+            width: 150px;
+            border-radius: 100px;
+            background-color: rgb(72, 206, 128);
+            border-style: none;
+            box-shadow: 0px 0px 10px black;
+            color:white;
+            text-shadow: 0px 0px 10px black;
+        }
+        #index:hover{
+            transition: 0.5s;
+            box-shadow: 0px 0px 10px rgb(72, 206, 128);
+        }
+        #image{
+            position: absolute;
+            margin-left: 45%;
+            margin-top: -7%;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html"><button id="index">Voltar ao Início</button></a>
+    <div class="iniciar">
+        <a href="login.html"><input type="button" class="cima" value="Login"></a><br>
+        <a href="cadastro.html"><input type="button" class="cima" value="Cadastro"></a>    
+    </div>
+    <h1 id="image">PLACEHOLDER IMAGE</h1>
+</body>
+</html>
